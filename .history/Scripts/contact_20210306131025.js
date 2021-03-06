@@ -82,7 +82,7 @@
     {
       "fullName" = data.FullName,
       "contactNumber" = data.ContactNumber,
-      "emailAddress" = data.EmailAddress;
+      "emailAddress" = data.EmailAddress
     }
 
     /**

@@ -75,14 +75,14 @@
     }
 
     /**
-     * This method takes a Json data Object and assigns the values to the Contact Class Object.
-     * @param {Object} data 
+     * This method converts a JSON object back into a Contact class Object
+     * @returns A Contact Class
      */
     fromJSON(data)
     {
       "fullName" = data.FullName,
       "contactNumber" = data.ContactNumber,
-      "emailAddress" = data.EmailAddress;
+      "emailAddress" = data.EmailAddress
     }
 
     /**

@@ -1,0 +1,25 @@
+{
+    "contacts":
+    [
+        {
+            "FullName":      "Tony Stark",
+            "ContactNumber": "1231232345",
+            "Email":         "Tony.Stark@gmail.com" 
+        },
+        {
+            "FullName":      "Bruce Banner",
+            "ContactNumber": "1231233456",
+            "Email":         "Brunce.Banner@gmail.com" 
+        },
+        {
+            "FullName":      "Stephen Strange",
+            "ContactNumber": "1231232347",
+            "Email":         "Stephen.Strange@gmail.com" 
+        },
+        {
+            "FullName":      "Reed Richards",
+            "ContactNumber": "1231232349",
+            "Email":         "Reed.Richards@gmail.com" 
+        }
+    ]
+}

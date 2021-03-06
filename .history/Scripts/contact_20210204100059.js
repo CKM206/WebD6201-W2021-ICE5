@@ -75,17 +75,6 @@
     }
 
     /**
-     * This method takes a Json data Object and assigns the values to the Contact Class Object.
-     * @param {Object} data 
-     */
-    fromJSON(data)
-    {
-      "fullName" = data.FullName,
-      "contactNumber" = data.ContactNumber,
-      "emailAddress" = data.EmailAddress;
-    }
-
-    /**
      * This method converts the Contact into a comma-separated value string
      *
      * @returns {string}
@@ -116,7 +105,6 @@
       this.ContactNumber = propertyArray[1];
       this.EmailAddress = propertyArray[2];
     }
-
   }
 
   core.Contact = Contact;
