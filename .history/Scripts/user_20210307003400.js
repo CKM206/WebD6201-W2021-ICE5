@@ -2,26 +2,16 @@
 // Contact Class
 
 ((core)=>{
-  class Contact {
+  class User {
     // getters and setters
-    get FullName() 
+    get DisplayName() 
     {
-      return this.m_fullName;
+      return this.m_displayName;
     }
   
-    set FullName(value) 
+    set DisplayName(value) 
     {
-      this.m_fullName = value;
-    }
-  
-    get ContactNumber() 
-    {
-      return this.m_contactNumber;
-    }
-  
-    set ContactNumber(value) 
-    {
-      this.m_contactNumber = value;
+      this.m_displayName = value;
     }
   
     get EmailAddress() 
@@ -33,19 +23,43 @@
     {
       this.m_emailAddress = value;
     }
+
+    get UserName() 
+    {
+      return this.m_username;
+    }
+  
+    set UserName(value) 
+    {
+      this.m_username = value;
+    }
+
+    get Password() 
+    {
+      return this.m_password;
+    }
+  
+    set Password(value) 
+    {
+      this.m_password = value;
+    }
   
     // constructor
 
-    /**
-     * @param {string} fullName 
-     * @param {string} contactNumber 
-     * @param {string} emailAddress 
-     */
-    constructor(fullName = "", contactNumber = "", emailAddress = "") 
+   /**
+    * Creates an instance of User.
+    * @param {string} [displayName=""]
+    * @param {string} [emailAddress=""]
+    * @param {string} [username=""]
+    * @param {string} [password=""]
+    * @memberof User
+    */
+   constructor(displayName = "", emailAddress = "", username = "", password = "") 
     {
-      this.FullName = fullName;
-      this.ContactNumber = contactNumber;
+      this.DisplayName = displayName;
+      this.Username = username;
       this.EmailAddress = emailAddress;
+      this.Password = password;
     }
 
     // methods
@@ -57,7 +71,7 @@
      */
     toString() 
     {
-      return `Full Name     : ${this.FullName} \nContact Number: ${this.ContactNumber}\nEmail Address : ${this.EmailAddress}`;
+      return `Display Name     : ${this.DisplayName} \nEmail Address : ${this.EmailAddress} \nUser Name: ${this.Username}`;
     }
 
     /**
@@ -68,9 +82,9 @@
     toJSON()
     {
       return {
-        "FullName": this.FullName,
-        "ContactNumber": this.ContactNumber,
-        "EmailAddress": this.EmailAddress
+        "fullName": this.FullName,
+        "contactNumber": this.ContactNumber,
+        "emailAddress": this.EmailAddress
       }
     }
 
@@ -80,9 +94,10 @@
      */
     fromJSON(data)
     {
-      this.FullName = data.FullName,
-      this.ContactNumber = data.ContactNumber,
+      this.DisplayName = data.DisplayName;
+      this.Username = data.Username;
       this.EmailAddress = data.EmailAddress;
+      this.Password = data.Password;
     }
 
     /**

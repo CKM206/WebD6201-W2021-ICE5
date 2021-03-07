@@ -68,9 +68,9 @@
     toJSON()
     {
       return {
-        "FullName": this.FullName,
-        "ContactNumber": this.ContactNumber,
-        "EmailAddress": this.EmailAddress
+        "fullName": this.FullName,
+        "contactNumber": this.ContactNumber,
+        "emailAddress": this.EmailAddress
       }
     }
 

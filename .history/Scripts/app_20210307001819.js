@@ -198,7 +198,7 @@
 
         contactList.innerHTML = data;
 
-        
+        //TODO - need to create an edit page
         $("button.edit").on("click", function(){
           location.href = "edit.html#" + $(this).val();
          });
