@@ -130,7 +130,7 @@
       let propertyArray = data.split(",");
       this.DisplayName = propertyArray[0];
       this.EmailAddress = propertyArray[1];
-      this.Username = propertyArray[2];
+      this.UserName = propertyArray[2];
     }
 
   }

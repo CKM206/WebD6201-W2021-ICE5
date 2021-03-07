@@ -163,8 +163,6 @@
 
     function displayContactList() 
     {
-      
-      
       // SHows what happens with asynchronous methods
       //console.log("Outside the event listener: " + XHR.responseText);
 

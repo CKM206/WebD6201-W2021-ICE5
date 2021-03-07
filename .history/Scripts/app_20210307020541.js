@@ -163,8 +163,6 @@
 
     function displayContactList() 
     {
-      
-      
       // SHows what happens with asynchronous methods
       //console.log("Outside the event listener: " + XHR.responseText);
 
@@ -283,13 +281,6 @@
 
     function displayLogin()
     {
-      // Check if a User is already on Session (Logged In)
-      if (sessionStorage.getItem("user"))
-      {
-        // Redirect the User
-        location.href = "contact-list.html";
-      }
-
       // Get the Message area from the login page form
       //-Keep it hidden, untill there are errors
       let messageArea = $("#messageArea");
@@ -311,7 +302,7 @@
           //-username & password
           for (const user of data.users) 
           {
-            if (username.val() == user.Username && password.val() == user.Password)
+            if (username.val() == user.UserName && password.val() == user.Password)
             {
               // Get the User info!
               potentialUser.fromJSON(user);

@@ -5,19 +5,19 @@
         {
             "DisplayName" : "John Smith",
             "EmailAddress": "John.Smith@gmail.com",
-            "Username": "johnsmith",
+            "UserName": "johnsmith",
             "Password": "123456"
         },
         {
             "DisplayName" : "May Smith",
             "EmailAddress": "May.Smith@gmail.com",
-            "Username": "maySmith",
+            "UserName": "maySmith",
             "Password": "123456"
         },
         {
             "DisplayName" : "Admin",
             "EmailAddress": "Admin@gmail.com",
-            "Username": "admin",
+            "UserName": "admin",
             "Password": "123456"
         }
     ]

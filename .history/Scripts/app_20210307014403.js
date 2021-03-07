@@ -163,8 +163,6 @@
 
     function displayContactList() 
     {
-      
-      
       // SHows what happens with asynchronous methods
       //console.log("Outside the event listener: " + XHR.responseText);
 
@@ -283,68 +281,20 @@
 
     function displayLogin()
     {
-      // Check if a User is already on Session (Logged In)
-      if (sessionStorage.getItem("user"))
-      {
-        // Redirect the User
-        location.href = "contact-list.html";
-      }
-
-      // Get the Message area from the login page form
-      //-Keep it hidden, untill there are errors
-      let messageArea = $("#messageArea");
-      messageArea.hide();
 
       // When the Login Button is clicked
       $("#loginButton").on("click", function()
       {
-        let username = $("#username");
-        let password = $("#password");
-        let goodLogin = false;
-        let potentialUser = new core.User();
+        let username = $("#username").val();
+        let password = $("#password").val();
 
-        // Gets the data from the Json file, Goodbye XHR!
         $.get("./Data/users.json", function(data)
         {
-          
-          // Loop through each user in the JSON File to find a matching
-          //-username & password
           for (const user of data.users) 
           {
-            if (username.val() == user.Username && password.val() == user.Password)
-            {
-              // Get the User info!
-              potentialUser.fromJSON(user);
-              // Set good Login
-              goodLogin = true;
-
-              // Get out of the Loop
-              break;
-            }
+            console.log(user);
           }
-            if (goodLogin == true)
-            {
-              // Remove any error details, and hide the message area
-              messageArea.removeAttr("class").text("").hide();
-              console.log("Made it!");
-
-              // Add the User to Session Storage
-              sessionStorage.setItem("user", potentialUser.serialize());
-
-              // Redirect the User to a secure area (Needs authentication)
-              location.href = "contact-list.html"
-
-            }
-            // If the login details were not good
-            else
-            {
-              // Give focus and select the username input
-              username.trigger("focus").trigger("select");
-              // Add the error classes, the error message and then show the messageArea
-              messageArea.addClass("alert alert-danger").text("Error: Invalid Login Credentials").show();
-            }
-          
-        });
+        })
       });
 
        // When the Cancel Button is clicked

@@ -163,8 +163,15 @@
 
     function displayContactList() 
     {
-      
-      
+      // Check if a User is already on Session (Logged In)
+      if (!sessionStorage.getItem("user"))
+      {
+        // Redirect the User
+        location.href = "login.html";
+      }
+
+      else
+      {
       // SHows what happens with asynchronous methods
       //console.log("Outside the event listener: " + XHR.responseText);
 
@@ -218,6 +225,7 @@
            location.href = "edit.html";
          });
       }
+    }
     }
 
 
