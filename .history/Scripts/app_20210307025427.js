@@ -162,7 +162,9 @@
     }
 
     function displayContactList() 
-    {  
+    {
+      
+      
       if (localStorage.length > 0) 
       {
         
@@ -357,10 +359,6 @@
         $("#loginListItem").html(
           `<a id="logout" class="nav-link" aria-current="page" href="#"><i class="fas fa-user-alt fa-lg"></i> Logout</a>`
         )
-        
-        $(`<li id="contactListItem" class="nav-item">
-        <a id="contactListLink" class="nav-link" aria-current="page" href="contact-list.html"><i class="fas fa-list fa-lg"></i> Contacts</a>
-       </li>`).insertBefore("#loginListItem");
       }
       else
       {
@@ -378,6 +376,9 @@
         location.href = "login.html";
       });
 
+      $(`<li id="contactListItem" class="nav-item">
+      <a id="contactListLink" class="nav-link" aria-current="page" href="contact-list.html"><i class="fas fa-list fa-lg"></i> Contacts</a>
+     </li>`).insertBefore("#loginListItem");
     }
   
 
