@@ -354,7 +354,7 @@
 
     }
 
-    function toggleLogin()
+    function toggleLoginLogout()
     {
       // Swap the login/Logout
       if (sessionStorage.getItem("user"))
@@ -417,7 +417,7 @@
             break;
         }
 
-        toggleLogin();
+        toggleLoginLogout();
         
     }
 

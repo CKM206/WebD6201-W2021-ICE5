@@ -354,33 +354,6 @@
 
     }
 
-    function toggleLogin()
-    {
-      // Swap the login/Logout
-      if (sessionStorage.getItem("user"))
-      {
-        $("#loginListItem").html(
-          `<a id="logout" class="nav-link" aria-current="page" href="#"><i class="fas fa-user-alt fa-lg"></i> Logout</a>`
-        )
-      }
-      else
-      {
-        $("#loginListItem").html(
-          `<a class="nav-link" aria-current="page" href="login.html"><i class="fas fa-user-alt fa-lg"></i> Login</a>`
-        )
-      }
-
-      $("#logout").on("click", function()
-      {
-        // Perform the Logout
-        sessionStorage.clear();
-
-        // Redirect the User
-        location.href = "login.html"
-
-      });
-    }
-
 
     function Start()
     {
@@ -416,8 +389,6 @@
             displayRegister();
             break;
         }
-
-        toggleLogin();
         
     }
 
