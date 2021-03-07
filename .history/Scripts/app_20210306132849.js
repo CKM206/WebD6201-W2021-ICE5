@@ -205,9 +205,9 @@
 
             contactIndex++;
           }
-          console.log(contactData);
         }
 
+        console.log(contactData);
 
       });
 

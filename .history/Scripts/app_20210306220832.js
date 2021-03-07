@@ -192,7 +192,7 @@
           for (const contact of contacts) 
           {    
             let newContact = new core.Contact();
-            newContact.fromJSON(contact);
+            newContact = newContact.fromJSON(contact);
 
             contactData += `<tr>
             <th class="text-center" scope="row">${contactIndex}</th>

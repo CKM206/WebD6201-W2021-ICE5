@@ -170,49 +170,7 @@
       // Step 2: Open a connection to a file or url
       XHR.open("GET", "./Data/contacts.json");
 
-      // Step 3: Send request to the server
-      XHR.send();
-
-      // Step 4: Listen for the Response & Handle it THIS IS ASYNCHRONOUS
-      //- Responses MUST occur in this function because of the
-      //nature of Async Functions, we can only confirm things within this function
-      XHR.addEventListener("readystatechange", function()
-      {
-        // Step 5: Ensure that the server is ready and there are no errors
-        // readyState 4 means all good, as does status 200
-        if(XHR.readyState === 4 && XHR.status === 200)
-        {
-          // Step 6: Do something with the data
-          let contacts = JSON.parse(XHR.responseText).contacts;
-          let contactData = "";
-          let contactIndex = 1;
-
-
-          // Loop through each contact of the Json File
-          for (const contact of contacts) 
-          {    
-            let newContact = new core.Contact();
-            newContact.fromJSON(contact);
-
-            contactData += `<tr>
-            <th class="text-center" scope="row">${contactIndex}</th>
-            <td>${newContact.FullName}</td>
-            <td>${newContact.ContactNumber}</td>
-            <td>${newContact.EmailAddress}</td>
-            <td class="text-center"><button value="${contactIndex}" class="btn btn-primary btn-sm edit"><i class="fas fa-edit fa-sm"></i> Edit</button></td>
-            <td class="text-center"><button value="${contactIndex}" class="btn btn-danger btn-sm delete"><i class="fas fa-trash-alt fa-sm"></i> Delete</button></td>
-            </tr>`;
-
-            contactIndex++;
-          }
-          console.log(contactData);
-        }
-
-
-      });
-
-      // SHows what happens with asynchronous methods
-      //console.log("Outside the event listener: " + XHR.responseText);
+      // Step 3:
 
       if (localStorage.length > 0) 
       {
